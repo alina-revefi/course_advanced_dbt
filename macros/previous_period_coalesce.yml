@@ -1,0 +1,24 @@
+# Documentation for the 'previous_period_coalesce' macro
+# This macro calculates the previous value of a column (previous period) using the LAG function,
+# and applies COALESCE to provide a default value when the LAG result is NULL.
+# Parameters:
+#   - lag_column_name: The name of the column to calculate the previous value from.
+#   - order_column_name: The column used for ordering the data to determine the previous period.
+#   - default_value: The value to use as a fallback when the LAG result is NULL.
+#   - column_name: The name of the resulting column after applying the macro.
+previous_period_coalesce:
+  description: >
+    Calculates the previous value of a column (previous period) using LAG and applies COALESCE for a default value.
+  macro_arguments:
+    - name: lag_column_name
+      description: The name of the column to calculate the previous value from.
+      type: string
+    - name: order_column_name
+      description: The column used for ordering the data to determine the previous period.
+      type: string
+    - name: default_value
+      description: The value to use as a fallback when the LAG result is NULL.
+      type: any
+    - name: column_name
+      description: The name of the resulting column after applying the macro.
+      type: string
