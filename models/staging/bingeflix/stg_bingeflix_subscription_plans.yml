@@ -12,15 +12,11 @@ models:
 
       - name: plan_name
         description: The name of the subscription plan.
-        tests:
-          - not_null
 
       - name: pricing
         description: The price of the subscription.
         tests:
-          - not_null
+          - assert_amount_is_greater_than_0
 
       - name: payment_period
         description: The recurring payment period for the subscription.
-        tests:
-          - not_null

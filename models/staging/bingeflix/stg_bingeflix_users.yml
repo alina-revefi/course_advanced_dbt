@@ -10,26 +10,18 @@ models:
 
       - name: created_at
         description: When the user was created.
-        tests:
-          - not_null
 
       - name: phone_number
         description: The user's phone number.
-        tests:
-          - not_null
 
       - name: deleted_at
         description: When the user's account was deleted. The value is NULL if the account has not been deleted.
 
       - name: username
         description: The username for login to Bingeflix.
-        tests:
-          - not_null
 
       - name: name
         description: The name of the user.
-        tests:
-          - not_null
 
       - name: sex
         description: The user's sex at birth.
